@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td, th {
+      border: 1px solid;
+    }
+    th{
+        background-color: aqua;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    </style>
+<body>
+    
+    <form  >
+        <input type="text" placeholder="name" id="name" onblur="return Verif_name();"/><br/>
+        <div id="err_name"> </div>
+        <input type="text" placeholder="prenom" id="prenom"/><br/>
+        <!-- <div id="err_prenom"></div> -->
+        <input type="text" placeholder="email" id="mail" onblur="return Verif();" /><br/>
+        <div id="err_mail"></div>
+        <input type="password" placeholder="password" id="pass" onblur="return Verif_password();"/><br/>
+        <div id="pass_err"></div><br/>
+        <div>
+        <select name="pays" id="option">
+            <option selected hidden > votre pays</option> 
+            <option>tunisie</option> 
+             <option>algerie</option> 
+              <option>moroco</option> 
+              </select>
+            </div>
+            <br/>
+              <b>Mes skills</b>
+                <div name="skills" >
+              <input type="checkbox" name="sk" value="DEVELOPPEMENT"/>DEVELOPPEMENT</br>
+              <input type="checkbox" name="sk" value="SYS ADMIN"/>SYS ADMIN</br>
+              <input type="checkbox" name="sk" value="DEVOPS"/>DEVOPS</br>
+              </div>
+        
+    </form>  
+    <input type="submit" value="verif"  onclick="Create_form(name);Create_table();"  />
+    <div id="form">
+
+    </div><br/><br/>
+
+
+     <div id="req">
+
+    </div> 
+   
+</body>
+<script defer src="saisie.js"></script>
+</html>

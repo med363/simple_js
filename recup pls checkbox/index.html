@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Comment récupérer les valeurs de plusieurs checkbox en JavaScript ?</title>
+</head>
+<body>   
+<input type="checkbox" name="test" value="1">Valeur 1<br>
+<input type="checkbox" name="test" value="2">Valeur 2<br>
+<input type="checkbox" name="test" value="3">Valeur 3<br>
+<input type="checkbox" name="test" value="4">Valeur 4<br>
+<input type="checkbox" name="test" value="5">Valeur 5<br>
+<button onclick="recupValeurs();">Envoyer</button>
+<script>
+function recupValeurs() {
+  var cases = document.getElementsByName('test');
+  var resultat = "";
+     for (var i = 0; i < cases.length; i++) {
+        if (cases[i].checked) {
+           resultat += cases[i].value  + ", ";
+        }
+     }
+  alert("Valeurs sélectionnées : " + resultat);
+}
+</script>
+</body>
+</html>
